@@ -30,16 +30,17 @@ export default function Menu (){
          <button onClick={handleToogleButton}>dark mode 
              {isToogle? ' on':' off'}
         </button>
-        <div className={isToogle ? 'dark-mode' : 'light-mode'}>
+        <div className={isToogle ? 'dark-mode' : 'light-mode'} style={{padding:"10px"}}>
        
         <div className="Navigation">
-            <div style={{display:"flex",alignItems:'center'}}>
-                <img src=".\email.jpg" style={{height:"20px",marginRight:'5px'}}></img>
+            <div style={{display:"flex",alignItems:'center',justifyContent:"space-around",width:"100%"}}>
+                <img src=".\email.jpg" style={{height:"20px"}}></img>
             <p onClick={showNavOne} tabIndex="0">Navigaton One </p>
+            <span className="dropdown-icon">{navOne ? '▲' : '▼'}</span>
             </div>
            
            {navOne &&
-            <div style={{}}>
+            <div className="submenu" style={{width:'100%'}}>
                 <p tabIndex="0">option 1</p>
                 <p tabIndex="0">option 2</p>
                 <p tabIndex="0">option 3</p>
@@ -47,18 +48,19 @@ export default function Menu (){
 
             </div>
            } 
-           <div style={{display:"flex",alignItems:'center'}}>
-            <img src=".\setting1.jpg" style={{height:"20px",marginRight:'5px'}}></img>
+           <div style={{display:"flex",alignItems:'center',justifyContent:"space-around"}}>
+            <img src=".\setting1.jpg" style={{height:"20px"}}></img>
            <p onClick={showNavTwo} tabIndex="0">Navigaton Two</p>
+           <span className="dropdown-icon">{navTwo ? '▲' : '▼'}</span>
            </div>
            
            {navTwo &&
-            <div style={{marginLeft:"8%"}}>
+            <div  className="submenu">
                 <p tabIndex="0">option 5</p>
                 <p tabIndex="0">option 6</p>
                 <p onClick={showSubMenu} tabIndex="0">Sub menu</p>
                 {subMenu &&
-                    <div style={{marginLeft:"12%"}}>
+                    <div  className="submenu1">
                           <p tabIndex="0">option 7</p>
                             <p tabIndex="0">option 8</p>
                     </div>
@@ -67,13 +69,14 @@ export default function Menu (){
 
             </div>
            } 
-           <div style={{display:"flex",alignItems:'center'}}>
-            <img src=".\fourbox.jpg" style={{height:'20px',marginRight:'5px'}}></img>
+           <div style={{display:"flex",alignItems:'center',justifyContent:"space-around"}}>
+            <img src=".\fourbox.jpg" style={{height:'20px'}}></img>
            <p onClick={showNavThree} tabIndex="0">Navigaton Three</p>
+           <span className="dropdown-icon">{navThree ? '▲' : '▼'}</span>
            </div>
            
             {navThree &&
-                <div style={{marginLeft:"8%"}}>
+                <div  className="submenu">
                      <p tabIndex="0">option 9</p>
                      <p tabIndex="0">option 10</p>
                      <p tabIndex="0">option 11</p>

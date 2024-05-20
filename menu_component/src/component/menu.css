@@ -14,6 +14,7 @@ button {
 
     color:black;
     margin-left: 8%;
+    cursor: pointer;
   }
 
   p:active{
@@ -71,5 +72,24 @@ width:15%;
     color:#A6AAAE;
     border-radius: 5px;
     padding: 5px;
+   
     
   }
+  
+.light-mode .dropdown-icon {
+  color: #1677FF;
+}
+
+
+.dark-mode .dropdown-icon {
+  color: white;
+}
+
+.submenu{
+  text-align: center;
+}
+
+
+
+
+
