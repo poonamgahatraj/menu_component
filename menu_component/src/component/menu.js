@@ -1,4 +1,6 @@
 import { useState } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope, faCog } from '@fortawesome/free-solid-svg-icons';
 import './menu.css'
 export default function Menu (){
 
@@ -33,14 +35,14 @@ export default function Menu (){
         <div className={isToogle ? 'dark-mode' : 'light-mode'} style={{padding:"10px"}}>
        
         <div className="Navigation">
-            <div style={{display:"flex",alignItems:'center',justifyContent:"space-around",width:"100%"}}>
-                <img src=".\email.jpg" style={{height:"20px"}}></img>
+            <div className="one" tabIndex="0" style={{display:"flex",alignItems:'center',justifyContent:"space-around",width:"100%"}}>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <p onClick={showNavOne} tabIndex="0">Navigaton One </p>
             <span className="dropdown-icon">{navOne ? '▲' : '▼'}</span>
             </div>
            
            {navOne &&
-            <div className="submenu" style={{width:'100%'}}>
+            <div className="submenu" >
                 <p tabIndex="0">option 1</p>
                 <p tabIndex="0">option 2</p>
                 <p tabIndex="0">option 3</p>
@@ -49,7 +51,7 @@ export default function Menu (){
             </div>
            } 
            <div style={{display:"flex",alignItems:'center',justifyContent:"space-around"}}>
-            <img src=".\setting1.jpg" style={{height:"20px"}}></img>
+           <FontAwesomeIcon icon={faCog} className="icon"/>
            <p onClick={showNavTwo} tabIndex="0">Navigaton Two</p>
            <span className="dropdown-icon">{navTwo ? '▲' : '▼'}</span>
            </div>
@@ -70,7 +72,7 @@ export default function Menu (){
             </div>
            } 
            <div style={{display:"flex",alignItems:'center',justifyContent:"space-around"}}>
-            <img src=".\fourbox.jpg" style={{height:'20px'}}></img>
+          <img src=".\fourbox.jpg" className="icon"></img> 
            <p onClick={showNavThree} tabIndex="0">Navigaton Three</p>
            <span className="dropdown-icon">{navThree ? '▲' : '▼'}</span>
            </div>
