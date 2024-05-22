@@ -100,5 +100,7 @@ width:15%;
 }
 
 
-
+ .light-mode .active-nav p {
+  color: blue;
+}
 
