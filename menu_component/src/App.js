@@ -1,10 +1,12 @@
-import Menu from "./component/menu";
+
+import Menu2 from "./component/menu2";
 
 
 function App() {
   return (
     <div className="App">
-  <Menu/>
+  {/* <Menu/> */}
+  <Menu2/>
     </div>
   );
 }
