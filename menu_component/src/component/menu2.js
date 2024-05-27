@@ -1,5 +1,5 @@
-import { useState } from "react";
 
+import NavItem from "./NavItem";
 
 export default function Menu2(){
     const navItems = [
@@ -45,27 +45,12 @@ export default function Menu2(){
         }
       ];
 
-      const [expandedNavItem, setExpandedNavItem] = useState(null);
-
-      const toggleNavItem = (id) => {
-        setExpandedNavItem(expandedNavItem === id ? null : id);
-      };
+     
     return(
         <>
-        <div>
+      <div>
       {navItems.map(item => (
-        <div key={item.id}>
-          <p onClick={() => toggleNavItem(item.id)} style={{ cursor: 'pointer' }}>
-            {item.label}
-          </p>
-          {expandedNavItem === item.id && item.subItems && (
-            <div style={{ marginLeft: '20px' }}>
-              {item.subItems.map(subItem => (
-                <p key={subItem.id}>{subItem.label}</p>
-              ))}
-            </div>
-          )}
-        </div>
+        <NavItem key={item.id} item={item} />
       ))}
     </div>
             </>
