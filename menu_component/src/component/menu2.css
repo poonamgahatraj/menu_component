@@ -1,0 +1,23 @@
+.light-mode {
+    background-color: white;
+    color: black;
+    min-height: 100vh;
+   
+  }
+  
+  /* Dark mode styles */
+  .dark-mode {
+    background-color: black;
+    color: white;
+
+  }
+
+  p:focus{
+    color:blue;
+    background-color: aliceblue;
+
+  }
+
+  p:hover{
+    color:grey
+  }
